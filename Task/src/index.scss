@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+@mixin btn(
+  $font-size: 1rem,
+  $padding: 0.6rem 1rem 0.6rem 1rem,
+  $radius: 5rem,
+  $bg: #101d2f,
+  $color: #fff
+) {
+  font-size: $font-size;
+  padding: $padding;
+  border-radius: $radius;
+  border: none;
+  background-color: $bg;
+  color: $color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.main {
+  .nav {
+    width: 100%;
+    height: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+
+    .nav2 {
+      display: flex;
+      gap: 2rem;
+      li {
+        font-size: 1rem;
+        font-weight: 500;
+        list-style: none;
+        padding: 0.2rem 1rem 0.2rem 1rem;
+      }
+      :nth-child(1) {
+        border: 0.2px solid gray;
+        border-radius: 5rem;
+      }
+    }
+    .nav3 {
+    @include btn();
+      gap: 0.2rem;
+      i {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  .Section1 {
+    width: 100%;
+    height: 90vh;
+    padding: 1rem 2.5rem;
+    .Hero {
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem;
+      background-image: url(./assets/image/hero-bg2.webp);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      overflow: hidden;
+      padding: 0 2rem;
+      .Center-info{
+        width: 100%;
+        height:100%;    
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between;
+     padding: 1rem 0;
+        .info-top{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          gap: 1rem;
+          color: #fff;
+          padding-top: 5rem;
+          h1{
+            font-size: 3rem;
+            font-weight: 300;
+          }
+          p{
+            font-size: 1.3rem;
+          }
+          button{
+            @include btn();
+          }
+        }
+
+        .info-bottom{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          text-align: center;
+          color: #fff;
+          .right{
+            display: flex;
+             justify-content: center;
+          align-items: center;
+          text-align: center;
+          gap: 1rem;
+          h1{
+            font-size: 1rem;
+            font-weight: 300;
+            text-decoration: underline;
+            i{
+              font-size: 1.2rem;
+            }
+          }
+          }
+        }
+
+      }
+    }
+  }
+}
