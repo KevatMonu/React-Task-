@@ -39,7 +39,8 @@ const App = () => {
 
 
   return (
-    <div className="w-screen h-screen bg-amber-300 flex flex-wrap  justify-center items-center gap-[1rem]">
+    <div className="w-full h-fit md:h-screen  bg-amber-300 flex flex-wrap  justify-center items-center gap-[2rem] pt-10 pb-10 relative">
+      <h1 className="absolute top-7 font-bold text-2xl">Create Card Using Props-Drilling</h1>
       {
         cards.map((elem)=>{
           return <Card name={elem.name}  info={elem.info} follower={elem.follower} share={elem.share} img={elem.bgImage}/>

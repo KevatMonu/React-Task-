@@ -2,7 +2,9 @@ import React from "react";
 
 const Card = (props) => {
   return (
-    <div className="w-70 h-110 rounded-3xl border-2   relative overflow-hidden hover:scale-[1.03] transition-all duration-300 shadow-lg shadow-black/30">
+
+    <div className="w-70 h-110 rounded-3xl border-2   relative overflow-hidden hover:scale-[1.03] transition-all duration-300 shadow-lg shadow-black/30 mt-[3rem]">
+        
       <img
         src={props.img}
         alt=""
